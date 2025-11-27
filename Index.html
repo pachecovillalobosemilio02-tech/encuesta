@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Únete a nuestro equipo!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Página 1: Formulario de Registro -->
+        <div class="page active" id="formPage">
+            <div class="header">
+                <h1>🏃 ¡Únete a nuestro equipo!</h1>
+                <p>Recibe las mejores ofertas en ropa deportiva</p>
+            </div>
+
+            <div class="discount-banner">
+                🎉 ¡10% de descuento en tu primera compra!
+            </div>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>¿Qué te interesa? (opcional)</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="calzado" name="intereses" value="Calzado deportivo">
+                        <label for="calzado">Calzado deportivo</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ropa-hombre" name="intereses" value="Ropa para hombre">
+                        <label for="ropa-hombre">Ropa para hombre</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ropa-mujer" name="intereses" value="Ropa para mujer">
+                        <label for="ropa-mujer">Ropa para mujer</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="accesorios" name="intereses" value="Accesorios">
+                        <label for="accesorios">Accesorios</label>
+                    </div>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="terminos" required>
+                    <label for="terminos">
+                        Acepto la <a href="#" target="_blank">política de privacidad</a> y deseo recibir promociones <span class="required">*</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Suscribirme ahora</button>
+            </form>
+        </div>
+
+        <!-- Página 2: Confirmación de Datos -->
+        <div class="page" id="confirmationPage">
+            <div class="confirmation-icon">📋</div>
+            
+            <h2 class="confirmation-title">Confirma tus datos</h2>
+            <p class="confirmation-subtitle">Por favor, verifica que la información sea correcta antes de completar tu registro.</p>
+
+            <div class="data-review">
+                <div class="data-review-title">
+                    📝 Resumen de tu información
+                </div>
+                
+                <div class="data-item">
+                    <span class="data-label">Nombre completo</span>
+                    <span class="data-value" id="confirmNombre"></span>
+                </div>
+                
+                <div class="data-item">
+                    <span class="data-label">Correo electrónico</span>
+                    <span class="data-value" id="confirmEmail"></span>
+                </div>
+                
+                <div class="data-item">
+                    <span class="data-label">Intereses</span>
+                    <div class="interests-tags" id="confirmIntereses"></div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-secondary" id="editBtn">✏️ Editar</button>
+                <button class="btn-primary" id="confirmBtn">✓ Confirmar</button>
+            </div>
+        </div>
+
+        <!-- Página 3: Registro Exitoso -->
+        <div class="page" id="successPage">
+            <div class="success-icon">✓</div>
+            
+            <h2 class="success-title">¡Registro Exitoso!</h2>
+            <p class="success-subtitle">Bienvenido a nuestra comunidad deportiva. Hemos enviado un correo de confirmación a tu email.</p>
+
+            <div class="user-info">
+                <div class="user-info-item">
+                    <div class="user-info-icon">👤</div>
+                    <div class="user-info-text">
+                        <div class="user-info-label">Nombre</div>
+                        <div class="user-info-value" id="displayNombre"></div>
+                    </div>
+                </div>
+                <div class="user-info-item">
+                    <div class="user-info-icon">📧</div>
+                    <div class="user-info-text">
+                        <div class="user-info-label">Email</div>
+                        <div class="user-info-value" id="displayEmail"></div>
+                    </div>
+                </div>
+                <div class="user-info-item">
+                    <div class="user-info-icon">🎯</div>
+                    <div class="user-info-text">
+                        <div class="user-info-label">Intereses</div>
+                        <div class="user-info-value" id="displayIntereses"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-code">
+                <div class="promo-code-label">Tu código de descuento</div>
+                <div class="promo-code-value">WELCOME10</div>
+            </div>
+
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>10% de descuento en tu primera compra</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Acceso exclusivo a ofertas anticipadas</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Envío gratis en compras superiores a $50</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">✓</span>
+                    <span>Contenido y consejos deportivos semanales</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn-primary" style="flex: initial; width: 100%;">Comenzar a comprar 🛒</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
